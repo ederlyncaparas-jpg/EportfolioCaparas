@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ederlyn Caparas - OOP E-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">E-Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#midterm" class="nav-link">Midterm</a></li>
+                <li><a href="#final" class="nav-link">Final</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Ederlyn Caparas</h1>
+                <p class="hero-subtitle">Object-Oriented Programming</p>
+                <p class="hero-school">PUP Sta. Mesa • BSIT 2-3</p>
+                <div class="intro-box">
+                    <h2>Portfolio Overview</h2>
+                    <p>Welcome to my midterm e-portfolio. This portfolio showcases my journey through Object-Oriented Programming, presenting a comprehensive collection of projects, exercises, and reflections from the midterm period. Each project represents a milestone in understanding core OOP concepts such as variables, operators, control flow, and system design.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#midterm" class="btn btn-primary">View Midterm Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <span>OOP</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span>Java</span>
+                </div>
+                <div class="floating-card card-3">
+                    <span>Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Midterm Section -->
+    <section id="midterm" class="section midterm-section">
+        <div class="section-container">
+            <h2 class="section-title">Midterm Projects</h2>
+            <p class="section-subtitle">A collection of OOP projects showcasing Java fundamentals and problem-solving</p>
+            
+            <div class="projects-grid">
+                <!-- About Me Card -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>About Me</h3>
+                        <span class="card-type">Reflection</span>
+                    </div>
+                    <p class="short-reflection">An exercise in self-realization and goal-setting.</p>
+                    <p class="full-reflection">This was an exercise in self-realization and setting goals for myself. This exercise made me realize my place as the "Beadle" of BSIT 2-3 and the duties that come with it. I felt a rush of excitement and slight nervousness in declaring my willingness to master intricate concepts such as encapsulation and inheritance.</p>
+                    <button class="btn-view" onclick="openModal('about-me.pdf')">View Project</button>
+                </div>
+
+                <!-- Activity 1: Intro to Java -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Intro to Java</h3>
+                        <span class="card-type">Activity 1</span>
+                    </div>
+                    <p class="short-reflection">My first step into the Java ecosystem.</p>
+                    <p class="full-reflection">This activity can best be described as mind-boggling. The visualization of Stack and Heap seemed to reveal what was previously thought of as intangible. That particular moment when it became clear that acc3 = acc1 did not create any new object, but merely referred to the old object was a major breakthrough.</p>
+                    <button class="btn-view" onclick="openModal('activity1-intro-java.pdf')">View Project</button>
+                </div>
+
+                <!-- Activity 1: Variables -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Variables</h3>
+                        <span class="card-type">Activity 1</span>
+                    </div>
+                    <p class="short-reflection">Laying the cornerstone of my Java understanding.</p>
+                    <p class="full-reflection">The exercise felt like laying down the cornerstone of my new home in programming. There was a sense of satisfaction and comprehension of how everything fits together when I comprehended the relationship between JDK, JRE, and JVM.</p>
+                    <button class="btn-view" onclick="openModal('activity1-variables.pdf')">View Project</button>
+                </div>
+
+                <!-- Activity 2: Operators -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Operators</h3>
+                        <span class="card-type">Activity 2</span>
+                    </div>
+                    <p class="short-reflection">Bitwise operators and complex unary incrementations.</p>
+                    <p class="full-reflection">This assignment challenged my ability to focus and stay persistent. Using bitwise operators and complex unary incrementations made this assignment feel like a challenge that needed to be solved.</p>
+                    <button class="btn-view" onclick="openModal('activity2-operators.pdf')">View Project</button>
+                </div>
+
+                <!-- Seatwork 2: Smart Wallet System -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Smart Wallet System</h3>
+                        <span class="card-type">Seatwork 2</span>
+                    </div>
+                    <p class="short-reflection">A practical system using if-else logic for transaction validation.</p>
+                    <p class="full-reflection">This task was extremely "worldly". Putting up the if-else logic for checking the minimum amount, as well as the limit per transaction, gave me the responsibility of doing my job correctly.</p>
+                    <button class="btn-view" onclick="openModal('seatwork2-wallet.pdf')">View Project</button>
+                </div>
+
+                <!-- Seatwork 3: Student Age Analyzer -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Student Age Analyzer</h3>
+                        <span class="card-type">Seatwork 3</span>
+                    </div>
+                    <p class="short-reflection">My first real experience with modularity.</p>
+                    <p class="full-reflection">Doing this was somehow an experience of me organizing my thoughts. It helped that I separated the age logic to a separate user-defined function, and there was this feeling that my code is getting "neater".</p>
+                    <button class="btn-view" onclick="openModal('seatwork3-age.pdf')">View Project</button>
+                </div>
+
+                <!-- Activity 3: Basic ATM System -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Basic ATM System</h3>
+                        <span class="card-type">Activity 3</span>
+                    </div>
+                    <p class="short-reflection">Building a 'living' program with do-while loops.</p>
+                    <p class="full-reflection">The process of making this project was like finding a beat in the user's experience. When I added the do-while loop, I had the impression of creating a "living" code. Each time I clicked "Yes" to conduct another transaction and noticed that my balance changed from 5,000 to 6,000, it was a triumph for me.</p>
+                    <button class="btn-view" onclick="openModal('activity3-atm.pdf')">View Project</button>
+                </div>
+
+                <!-- Activity 4: Scholarship Qualification System -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Scholarship Qualification System</h3>
+                        <span class="card-type">Activity 4</span>
+                    </div>
+                    <p class="short-reflection">Combining entrance exam scores and interview results.</p>
+                    <p class="full-reflection">The entire process was similar to that of a judge or assessor. The amount of logic required to combine entrance exam scores and interviews was immense. I was proud of myself when I realized that the program could distinguish between different qualification levels.</p>
+                    <button class="btn-view" onclick="openModal('activity4-scholarship.pdf')">View Project</button>
+                </div>
+
+                <!-- Activity 5: Personal Expense Tracker -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Personal Expense Tracker</h3>
+                        <span class="card-type">Activity 5</span>
+                    </div>
+                    <p class="short-reflection">My most complete project yet.</p>
+                    <p class="full-reflection">This was a milestone in my midterm adventure. This was the most personalized and complete project I have done yet. The sense of creativity that comes through when adding the "Remaining Balance" and "Overspend" functionalities to the program is very real indeed.</p>
+                    <button class="btn-view" onclick="openModal('activity5-expense.pdf')">View Project</button>
+                </div>
+
+                <!-- Midterm Quiz #1 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Midterm Quiz #1</h3>
+                        <span class="card-type">Quiz</span>
+                    </div>
+                    <p class="short-reflection">OOP demands a special kind of thinking.</p>
+                    <p class="full-reflection">While working through this quiz, I came to realize that Object-Oriented Programming (OOP) demands some special kind of thinking process, unlike basic procedural programming. The biggest challenge was dealing with a large number of classes that needed to be traced.</p>
+                    <button class="btn-view" onclick="openModal('midterm-quiz1.png', true)">View Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Section -->
+    <section id="final" class="section final-section">
+        <div class="section-container">
+            <h2 class="section-title">Final Projects</h2>
+            <p class="section-subtitle">Final outputs will be displayed here</p>
+            <div class="placeholder-content">
+                <div class="placeholder-icon">📋</div>
+                <p>Final projects will be showcased here using the same project card and modal structure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <a href="mailto:ederlyncaparas@gmail.com">ederlyncaparas@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p>PUP Sta. Mesa</p>
+                    <p>BSIT 2-3</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💻</div>
+                    <h3>Focus Area</h3>
+                    <p>Object-Oriented Programming</p>
+                    <p>Java Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for viewing PDFs and Images -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modal-body" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
