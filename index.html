@@ -1,224 +1,380 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ederlyn Caparas - OOP E-Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">✨</span>
-                <span class="logo-text">E-Portfolio</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#midterm" class="nav-link">Midterm</a></li>
-                <li><a href="#final" class="nav-link">Final</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OOP Midterm Portfolio</title> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <style>
+    :root{
+      --bg:#fef6f9;
+      --card:#fff;
+      --accent:#ffd6e0;
+      --text:#444;
+      --soft:#f9f9f9;
+    }
 
-    <!-- Home Section -->
-    <section id="home" class="section home-section">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Ederlyn Caparas</h1>
-                <p class="hero-subtitle">Object-Oriented Programming</p>
-                <p class="hero-school">PUP Sta. Mesa • BSIT 2-3</p>
-                <div class="intro-box">
-                    <h2>Portfolio Overview</h2>
-                    <p>Welcome to my midterm e-portfolio. This portfolio showcases my journey through Object-Oriented Programming, presenting a comprehensive collection of projects, exercises, and reflections from the midterm period. Each project represents a milestone in understanding core OOP concepts such as variables, operators, control flow, and system design.</p>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#midterm" class="btn btn-primary">View Midterm Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-card card-1">
-                    <span>OOP</span>
-                </div>
-                <div class="floating-card card-2">
-                    <span>Java</span>
-                </div>
-                <div class="floating-card card-3">
-                    <span>Design</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    *{box-sizing:border-box;}
 
-    <!-- Midterm Section -->
-    <section id="midterm" class="section midterm-section">
-        <div class="section-container">
-            <h2 class="section-title">Midterm Projects</h2>
-            <p class="section-subtitle">A collection of OOP projects showcasing Java fundamentals and problem-solving</p>
-            
-            <div class="projects-grid">
-                <!-- About Me Card -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>About Me</h3>
-                        <span class="card-type">Reflection</span>
-                    </div>
-                    <p class="short-reflection">An exercise in self-realization and goal-setting.</p>
-                    <p class="full-reflection">This was an exercise in self-realization and setting goals for myself. This exercise made me realize my place as the "Beadle" of BSIT 2-3 and the duties that come with it. I felt a rush of excitement and slight nervousness in declaring my willingness to master intricate concepts such as encapsulation and inheritance.</p>
-                    <button class="btn-view" onclick="openModal('about-me.pdf')">View Project</button>
-                </div>
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
 
-                <!-- Activity 1: Intro to Java -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Intro to Java</h3>
-                        <span class="card-type">Activity 1</span>
-                    </div>
-                    <p class="short-reflection">My first step into the Java ecosystem.</p>
-                    <p class="full-reflection">This activity can best be described as mind-boggling. The visualization of Stack and Heap seemed to reveal what was previously thought of as intangible. That particular moment when it became clear that acc3 = acc1 did not create any new object, but merely referred to the old object was a major breakthrough.</p>
-                    <button class="btn-view" onclick="openModal('activity1-intro-java.pdf')">View Project</button>
-                </div>
+    header{
+      text-align:center;
+      padding:35px 15px 10px;
+    }
 
-                <!-- Activity 1: Variables -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Variables</h3>
-                        <span class="card-type">Activity 1</span>
-                    </div>
-                    <p class="short-reflection">Laying the cornerstone of my Java understanding.</p>
-                    <p class="full-reflection">The exercise felt like laying down the cornerstone of my new home in programming. There was a sense of satisfaction and comprehension of how everything fits together when I comprehended the relationship between JDK, JRE, and JVM.</p>
-                    <button class="btn-view" onclick="openModal('activity1-variables.pdf')">View Project</button>
-                </div>
+    header h1{
+      margin:0;
+      font-size:26px;
+      font-weight:600;
+    }
 
-                <!-- Activity 2: Operators -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Operators</h3>
-                        <span class="card-type">Activity 2</span>
-                    </div>
-                    <p class="short-reflection">Bitwise operators and complex unary incrementations.</p>
-                    <p class="full-reflection">This assignment challenged my ability to focus and stay persistent. Using bitwise operators and complex unary incrementations made this assignment feel like a challenge that needed to be solved.</p>
-                    <button class="btn-view" onclick="openModal('activity2-operators.pdf')">View Project</button>
-                </div>
+    header p{
+      margin:5px 0 0;
+      font-size:14px;
+      opacity:.7;
+    }
 
-                <!-- Seatwork 2: Smart Wallet System -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Smart Wallet System</h3>
-                        <span class="card-type">Seatwork 2</span>
-                    </div>
-                    <p class="short-reflection">A practical system using if-else logic for transaction validation.</p>
-                    <p class="full-reflection">This task was extremely "worldly". Putting up the if-else logic for checking the minimum amount, as well as the limit per transaction, gave me the responsibility of doing my job correctly.</p>
-                    <button class="btn-view" onclick="openModal('seatwork2-wallet.pdf')">View Project</button>
-                </div>
+    .top-actions{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
 
-                <!-- Seatwork 3: Student Age Analyzer -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Student Age Analyzer</h3>
-                        <span class="card-type">Seatwork 3</span>
-                    </div>
-                    <p class="short-reflection">My first real experience with modularity.</p>
-                    <p class="full-reflection">Doing this was somehow an experience of me organizing my thoughts. It helped that I separated the age logic to a separate user-defined function, and there was this feeling that my code is getting "neater".</p>
-                    <button class="btn-view" onclick="openModal('seatwork3-age.pdf')">View Project</button>
-                </div>
+    .btn{
+      padding:10px 14px;
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      background:#fff;
+      box-shadow:0 4px 10px rgba(0,0,0,.08);
+      font-family:'Poppins',sans-serif;
+      font-size:13px;
+    }
 
-                <!-- Activity 3: Basic ATM System -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Basic ATM System</h3>
-                        <span class="card-type">Activity 3</span>
-                    </div>
-                    <p class="short-reflection">Building a 'living' program with do-while loops.</p>
-                    <p class="full-reflection">The process of making this project was like finding a beat in the user's experience. When I added the do-while loop, I had the impression of creating a "living" code. Each time I clicked "Yes" to conduct another transaction and noticed that my balance changed from 5,000 to 6,000, it was a triumph for me.</p>
-                    <button class="btn-view" onclick="openModal('activity3-atm.pdf')">View Project</button>
-                </div>
+    .btn:hover{
+      border:2px solid var(--accent);
+    }
 
-                <!-- Activity 4: Scholarship Qualification System -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Scholarship Qualification System</h3>
-                        <span class="card-type">Activity 4</span>
-                    </div>
-                    <p class="short-reflection">Combining entrance exam scores and interview results.</p>
-                    <p class="full-reflection">The entire process was similar to that of a judge or assessor. The amount of logic required to combine entrance exam scores and interviews was immense. I was proud of myself when I realized that the program could distinguish between different qualification levels.</p>
-                    <button class="btn-view" onclick="openModal('activity4-scholarship.pdf')">View Project</button>
-                </div>
+    .container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:15px;
+      padding:20px;
+      max-width:700px;
+      margin:auto;
+    }
 
-                <!-- Activity 5: Personal Expense Tracker -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Personal Expense Tracker</h3>
-                        <span class="card-type">Activity 5</span>
-                    </div>
-                    <p class="short-reflection">My most complete project yet.</p>
-                    <p class="full-reflection">This was a milestone in my midterm adventure. This was the most personalized and complete project I have done yet. The sense of creativity that comes through when adding the "Remaining Balance" and "Overspend" functionalities to the program is very real indeed.</p>
-                    <button class="btn-view" onclick="openModal('activity5-expense.pdf')">View Project</button>
-                </div>
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:18px;
+      text-align:center;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(0,0,0,.08);
+      transition:.2s;
+    }
 
-                <!-- Midterm Quiz #1 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <h3>Midterm Quiz #1</h3>
-                        <span class="card-type">Quiz</span>
-                    </div>
-                    <p class="short-reflection">OOP demands a special kind of thinking.</p>
-                    <p class="full-reflection">While working through this quiz, I came to realize that Object-Oriented Programming (OOP) demands some special kind of thinking process, unlike basic procedural programming. The biggest challenge was dealing with a large number of classes that needed to be traced.</p>
-                    <button class="btn-view" onclick="openModal('quiz1.png', true)">View Project</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    .card:hover{
+      transform:translateY(-5px);
+      border:2px solid var(--accent);
+    }
 
-    <!-- Final Section -->
-    <section id="final" class="section final-section">
-        <div class="section-container">
-            <h2 class="section-title">Final Projects</h2>
-            <p class="section-subtitle">Final outputs will be displayed here</p>
-            <div class="placeholder-content">
-                <div class="placeholder-icon">📋</div>
-                <p>Final projects will be showcased here using the same project card and modal structure.</p>
-            </div>
-        </div>
-    </section>
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.5);
+      justify-content:center;
+      align-items:center;
+      padding:10px;
+      z-index:1000;
+    }
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="section-container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email</h3>
-                    <a href="mailto:ederlyncaparas@gmail.com">ederlyncaparas@gmail.com</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🎓</div>
-                    <h3>Education</h3>
-                    <p>PUP Sta. Mesa</p>
-                    <p>BSIT 2-3</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">💻</div>
-                    <h3>Focus Area</h3>
-                    <p>Object-Oriented Programming</p>
-                    <p>Java Development</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    .modal-content{
+      background:#fff;
+      padding:20px;
+      border-radius:18px;
+      width:100%;
+      max-width:520px;
+      max-height:90vh;
+      overflow-y:auto;
+    }
 
-    <!-- Modal for viewing PDFs and Images -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <div id="modal-body" class="modal-body"></div>
-        </div>
-    </div>
+    .close{float:right;cursor:pointer;font-weight:bold;}
 
-    <script src="script.js"></script>
-</body>
+    .item{
+      background:var(--soft);
+      padding:12px;
+      margin:10px 0;
+      border-radius:12px;
+      cursor:pointer;
+    }
+
+    .img-box img{
+      width:100%;
+      border-radius:12px;
+      margin-top:8px;
+      cursor:pointer;
+    }
+
+    .reflection{
+      margin-top:12px;
+      padding:12px;
+      background:#fff7fa;
+      border-left:4px solid var(--accent);
+      border-radius:10px;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .back{margin-top:10px;display:inline-block;cursor:pointer;opacity:.7;}
+
+    .sub-title{margin-top:10px;font-weight:600;}
+
+    .img-modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.85);
+      justify-content:center;
+      align-items:center;
+      z-index:2000;
+    }
+
+    .img-modal img{
+      max-width:90%;
+      max-height:90%;
+      border-radius:10px;
+    }
+
+  </style></head>
+<body><header>
+  <h1>OOP Midterm Portfolio</h1>
+  <p>Object-Oriented Programming E-Portfolio</p>  <div class="top-actions">
+    <button class="btn" onclick="openAbout()">About This Portfolio</button>
+  </div>
+</header><div class="container">
+  <div class="card" onclick="openCategory('quiz')">Quiz</div>
+  <div class="card" onclick="openCategory('assignment')">Assignments</div>
+  <div class="card" onclick="openCategory('seatwork')">Seatwork</div>
+  <div class="card" onclick="openCategory('activity')">Activity</div>
+</div><div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <div id="modalBody"></div>
+  </div>
+</div><div id="imgModal" class="img-modal" onclick="closeImg()">
+  <img id="imgPreview">
+</div><script>
+
+const aboutText = `
+<b>Full Name:</b> Angel Jamil P. Prestosa<br>
+<b>Course:</b> Object-Oriented Programming<br>
+<b>School/Section:</b> Polytechnic University of the Philippines - BSIT 2-3
+<br><br>
+<b>Introduction:</b><br>
+This e-portfolio presents my Midterm Project in Object-Oriented Programming using HTML. It includes quizzes, activities, and assignments that demonstrate my understanding of OOP concepts. Additionally, this site reflects my learning progress, understanding, and reflections throughout the first half of the course.
+`;
+
+function openAbout(){
+  document.getElementById('modalBody').innerHTML = `
+    <h3>About This Portfolio</h3>
+    <p>${aboutText}</p>
+  `;
+  document.getElementById('modal').style.display='flex';
+}
+
+const data = {
+
+  quiz:[
+    { title:"Quiz 1", images:["images/quiz1.jpg"], reflection:"I got 34/45 on this quiz, which is not that high, but I still believe I understand the basic logic of Java. It showed me which parts I need to improve, especially in analyzing problems more carefully. Overall, it helped me become more aware of my strengths and weaknesses." }
+  ],
+
+  assignment:[
+    { title:"About Me", images:["images/assignment1.jpg"], reflection:"The “All About Me” activity was just a fun and light exercise where I got to share a bit about myself, like my details, three words that describe me, my impression of my teacher, and my expectations for OOP. It wasn’t too deep, but it helped me think a little about how I see myself and what I’m looking forward to in the subject. Overall, it was a chill way to start and get comfortable." },
+    { title:"Introduction to Java", images:["images/assignment2_1.jpg","images/assignment2_2.jpg"], reflection:"This activity helped me understand what happens behind the code, especially how Java runs through the JVM and JRE. It made me appreciate the language more because I now know it’s not just about writing code, but also how it is executed and managed by the system." }
+  ],
+
+  seatwork:[
+    { title:"Bitwise", reflection:"This seatwork helped me understand the difference between operators like & and &&, and how increment and decrement work in different situations. It also trained me to compute expressions step-by-step and be more careful with how values change." },
+    { title:"Smart Wallet System", images:["images/s2.jpg","images/s2_1.jpg"], reflection:"This activity helped me practice building a more complete program using loops, conditions, and user input. It showed me how real systems handle transactions and validations. I also learned the importance of setting limits and checking conditions to avoid errors." },
+    { title:"Student Age Analyzer", images:["images/s3_1.jpg","images/s3_2.jpg"], reflection:"This seatwork helped me understand how to use methods and conditions to categorize data. Writing the code by hand also made me more mindful of syntax and structure. It improved my understanding of how programs are organized and how logic flows step-by-step." }
+  ],
+
+  activity:[
+
+  {
+    title:"Variables",
+    images:["images/act1.jpg"],
+    reflection:"This activity helped me understand how variables work in memory, not just in code. By tracing step-by-step, I realized how values change and how references point to different data. It made me more careful when reading programs because even small changes can affect the whole output."
+  },
+
+  {
+    title:"Operators",
+   subs:[
+  {
+    name:"Bitwise Operator",
+    code:["images/act2_bitwise_code.jpg"],
+    output:["images/act2_bitwise_output.jpg"]
+  },
+  {
+    name:"Ternary Operator",
+    code:["images/act2_ternary_code.jpg"],
+    output:["images/act2_ternary_output.jpg"]
+  },
+  {
+    name:"Assignment Operator",
+    code:["images/act2_assignment_code.jpg"],
+    output:["images/act2_assignment_output.jpg"]
+  },
+  {
+    name:"Operator",
+    code:["images/act2_operator_code.jpg"],
+    output:["images/act2_operator_output.jpg"]
+  }
+],
+    reflection:"This activity helped me understand how different operators work and how they affect the result of a program. By creating separate programs and combining multiple operators, I learned how expressions are evaluated and why order of operations matters. It also trained me to avoid hardcoding and instead rely on proper computations. Overall, this activity improved both my logic and how I write cleaner and more efficient code."
+  },
+
+  {
+    title:"Basic ATM Machine",
+    subs:[
+      {
+        name:"Code",
+        code:["images/a3_code1.jpg","images/a3_code2.jpg","images/a3_code3.jpg"],
+        output:[]
+      },
+      {
+        name:"Sample Output",
+        code:[],
+        output:["images/a3_out1.jpg", "images/a3_out2.jpg"]
+      }
+    ],
+    reflection:"This activity helped me understand how real programs handle user input and decisions. Using switch, loops, and conditions together made the program more interactive. It also showed me how important validation is, especially when dealing with transactions."
+  },
+
+  {
+    title:"Student Enrollment Assessment",
+    subs:[
+      {
+        name:"Code",
+        code:["images/act4_code1.jpg","images/act4_code2.jpg","images/act4_code3.jpg","images/act4_code4.jpg", "images/act4_code5.jpg"],
+        output:[]
+      },
+      {
+        name:"Sample Output",
+        code:[],
+        output:["images/act4_out1.jpg","images/act4_out2.jpg"]
+      }
+    ],
+    reflection:"This activity helped me practice combining different concepts like nested if statements and switch cases in one program. It made me realize how programs can simulate real-life decision systems. I also learned the importance of organizing conditions properly to avoid errors."
+  },
+
+  {
+    title:"Personal Expense Tracker",
+    subs:[
+      {
+        name:"Code",
+        code:["images/a5_c1.jpg","images/a5_c2.jpg","images/a5_c3.jpg","images/a5_c4.jpg","images/a5_c5.jpg"],
+        output:[]
+      },
+      {
+        name:"Sample Output",
+        code:[],
+        output:["images/a5_o1.jpg","images/a5_o2.jpg"]
+      }
+    ],
+    reflection:"This activity helped me understand how methods work and why they are important in organizing code. Breaking the program into smaller functions made it easier to manage and understand. It also showed how programming can be applied to real-life situations like budgeting."
+  }
+
+]
+
+};
+
+let current;
+
+function openCategory(c){
+  current=c;
+  let html=`<h3>${c.toUpperCase()}</h3>`;
+  data[c].forEach((x,i)=>{
+    html+=`<div class='item' onclick='openItem(${i})'>${x.title}</div>`;
+  });
+  document.getElementById('modalBody').innerHTML=html;
+  document.getElementById('modal').style.display='flex';
+}
+
+
+function openItem(i){
+  const item=data[current][i];
+  let html=`<h3>${item.title}</h3>`;
+
+  // IF has sub-items
+  if(item.subs){
+    item.subs.forEach((s,si)=>{
+      html+=`<div class='item' onclick='openSub(${i},${si})'>${s.name}</div>`;
+    });
+
+    // reflection for items WITH subs
+    html+=`<div class='reflection'><b>Reflection:</b><br>${item.reflection}</div>`;
+  } 
+  else {
+    if(item.images){
+      item.images.forEach(img=>{
+        html+=`<div class='img-box'><img src='${img}' onclick="openImg('${img}')"></div>`;
+      });
+    }
+
+    // reflection for normal items
+    html+=`<div class='reflection'><b>Reflection:</b><br>${item.reflection}</div>`;
+  }
+
+  html+=`<div class='back' onclick="openCategory('${current}')">← Back</div>`;
+
+  document.getElementById('modalBody').innerHTML=html;
+}
+
+function openImg(src){
+  document.getElementById('imgModal').style.display='flex';
+  document.getElementById('imgPreview').src=src;
+}
+
+function closeImg(){
+  document.getElementById('imgModal').style.display='none';
+}
+
+function closeModal(){
+  document.getElementById('modal').style.display='none';
+}
+
+function openSub(i,si){
+  const item=data[current][i];
+  const sub=item.subs[si];
+
+  let html=`<h3>${item.title} - ${sub.name}</h3>`;
+
+  if(sub.code.length){
+    html+=`<div class='sub-title'>Code</div>`;
+    sub.code.forEach(c=>{
+      html+=`<div class='img-box'><img src='${c}' onclick="openImg('${c}')"></div>`;
+    });
+  }
+
+  if(sub.output.length){
+    html+=`<div class='sub-title'>Sample Output</div>`;
+    sub.output.forEach(o=>{
+      html+=`<div class='img-box'><img src='${o}' onclick="openImg('${o}')"></div>`;
+    });
+  }
+
+  html+=`<div class='reflection'><b>Reflection:</b><br>${item.reflection}</div>`;
+  html+=`<div class='back' onclick="openItem(${i})">← Back</div>`;
+
+  document.getElementById('modalBody').innerHTML=html;
+}
+</script></body>
 </html>
